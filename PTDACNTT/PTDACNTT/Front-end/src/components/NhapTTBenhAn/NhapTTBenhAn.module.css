@@ -1,0 +1,73 @@
+.cont{
+    max-width: 600px    ;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn_con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    min-width: 5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #01BABE;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.hienThi_nhap{
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    height: 100%;
+    background-color: rgb(0, 0, 0 ,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+.hienThi_nhap_content{
+    min-width: 40rem;
+    position: relative;
+    background-color: #fff;
+    border: 8px;
+    border: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    border: '1px solid #ccc';
+    padding: '10px';
+    border-radius: '8px';
+    max-width: 900px;
+    overflow-wrap: break-word; /* Đảm bảo text tự động xuống dòng khi quá dài */
+    word-wrap: break-word;
+}
+.close_btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.inputText{
+    width: 100%;
+    height: auto;
+    resize: none; 
+    padding: 10px; 
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.in{
+    width: 20rem;
+    height: 1.5rem;
+}

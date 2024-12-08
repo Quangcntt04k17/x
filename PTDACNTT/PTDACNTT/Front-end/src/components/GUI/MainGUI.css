@@ -1,0 +1,321 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #FFFFFF;
+    margin: auto;
+}
+.tong{
+    margin: auto;
+}
+header{
+    height: 100px;
+    background-color: #00ac4f;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+}
+header .tenHT h1{
+    line-height: 100px;
+    margin-left: 20px;
+    color: #FFFFFF;
+    font-size: 50px;
+}
+.taiKhoan{
+    display: flex;
+    align-items: center;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    width: 100%;
+    background-color: #FFFFFF;
+}
+.logo img{
+    width: 70px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.menu ul li{
+    display: inline;
+    line-height: 80px;
+    list-style-type: none;
+    padding: 10px 50px 20px;
+    border-radius: 20px;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: #00ac4f;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.menu ul li:hover{
+    background-color: #F2F3F4;
+}
+.timKiem{
+    line-height: 80px;
+    margin-right: 10px;
+    width: 20%;
+}
+.timKiem input{
+    border-radius: 10px;
+    height: 40px;
+    border: 2px solid #00ac4f;
+    padding-left: 10px;
+    width: 60%;
+}
+.timKiem button{
+    height: 40px;
+    border-radius: 10px;
+    padding: 0 10px;
+    border: 2px solid #00ac4f;
+    background-color: #00ac4f;
+    color: #FFFFFF;
+}
+/* Căn chỉnh container của banner */
+.banner-container {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Định dạng từng banner */
+  .banner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: opacity 0.5s ease-in-out; /* Tạo hiệu ứng mờ dần */
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+  }
+  
+  .banner-1 {
+    background-image: url('asset/4\ \(1\).png'); /* Hình ảnh đầu tiên */
+    opacity: 1; /* Banner mặc định hiện lên */
+  }
+  
+  .banner-2 {
+    background-image: url('asset/4\ \(2\).png');
+  }
+  
+  .banner-3 {
+    background-image: url('asset/4\ \(3\).png');
+  }
+  
+  /* Khi di chuột vào banner-container, các banner sẽ xuất hiện lần lượt */
+  .banner-container:hover .banner-1 {
+    opacity: 1;
+  }
+  
+  .banner-container:hover .banner-2 {
+    opacity: 1;
+    transition-delay: 2s; /* Hiển thị sau banner 1 */
+  }
+  
+  .banner-container:hover .banner-3 {
+    opacity: 1;
+    transition-delay: 4s; /* Hiển thị sau banner 2 */
+  }
+#trangchu{
+    background-color: #F2F3F4;
+}
+.cha{
+    position: relative;
+}
+.con{
+    background-color: #FFFFFF;
+    position: absolute;
+    display: none;
+    width: 270px;
+    z-index: 1;
+    top: 100%; /* Đặt menu con ngay dưới menu cha */
+    left: 0; /* Đảm bảo menu con căn trái với menu cha */
+}
+.con ul li{
+    display: block;
+    margin: auto;
+    list-style-type: none;
+}
+.cha:hover .con{
+    display: block;
+    opacity: 1;
+}
+#quanly{
+    background-color: #00ac4f;
+}
+.chaomung h1{
+    color: #00ac4f;
+    margin-top: 40px;
+    text-align: center;
+}
+#gachchan{
+    text-align: center;
+    color: #00ac4f;
+    font-weight: bolder;
+}
+#gachchan1{
+    text-align: center;
+    color: #00ac4f;
+    font-weight: bolder;
+    margin-bottom: 50PX;
+}
+.gioithieu{
+    display: flex;
+    justify-content: space-between;
+    width: 1400px;
+    margin: auto;
+}
+.gt{
+    box-sizing: border-box;
+    width: 23%;
+    margin-top: 30px;
+    text-align: center;
+    transition: transform 0.5s;
+}
+.gt img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    margin: 20px 0;
+    box-shadow: 2px 2px 50px 20px rgba(0, 0, 0, 0.2);
+}
+.gt:hover{
+    transform: scale(1.08);
+}
+.gt h2{
+    color: #00ac4f;
+    margin-bottom: 20px;
+}
+.gt p{
+    margin-bottom: 50px;
+}
+.quangba{
+    background-color: #f5f8fa;
+    margin-bottom: 20px;
+}
+#tieuchi{
+    color: #00ac4f;
+    text-align: center;
+    padding-top: 30px;
+}
+#van{
+    padding: 10px 80px;
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 50px;
+    width: 1400px;
+    margin: auto;
+}
+.thongtin{
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    padding: 30px;
+    width: 1000px;
+    margin: auto;
+    box-shadow: 0px 0px 50px 30px rgba(0, 0, 0, 0.1);
+    transition: border-radius 1s, transform 2s;
+}
+.thongtin:hover{
+    border-radius: 0 100px 0 100px;
+    transform: scale(1.05);
+}
+.tt{
+    width: 15%;
+    text-align: center;
+}
+.tt img{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+}
+.tt h1{
+    margin: 10px 0;
+}
+footer{
+    margin-top: 50px;
+    background-color: #00ac4f;
+    display: flex;
+}
+.mot{
+    width: 35%;
+    padding: 30px;
+    color: #FFFFFF;
+}
+.hai{
+    width: 25%;
+    padding: 30px;
+    color: #FFFFFF;
+}
+.ba{
+    width: 20%;
+    padding: 30px;
+    color: #FFFFFF;
+}
+.bon{
+    width: 20%;
+    padding: 30px;
+    color: #FFFFFF;
+}
+#form-login {
+    width: 500px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    margin-top: 300px;
+    text-align: center;
+    z-index: 2000;
+    
+    
+}
+
+#form-login input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+#form-login button {
+    padding: 10px;
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+#nutDangNhap{
+    width: 100px;
+    height: 40px;
+    margin-right: 20px;
+    border-radius: 20px;
+    border: none;
+    
+}
+#nutDangNhap:hover{
+    background-color: rgb(201, 201, 202);
+}  
+
+.link_btn{
+    display: inline-block; /* Làm cho thẻ a có thể giống như nút */
+    padding: 10px 20px; /* Khoảng cách bên trong */
+    font-size: 16px; /* Kích thước chữ */
+    color: white; /* Màu chữ */
+    background-color: #01BABE;
+    border: none; /* Bỏ đường viền */
+    border-radius: 5px; /* Bo góc */
+    text-decoration: none; /* Bỏ gạch chân */
+    text-align: center; /* Căn giữa chữ */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển đổi màu nền */
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.link_btn:hover{
+    background-color: rgb(2, 114, 118);
+}

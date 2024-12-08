@@ -1,0 +1,32 @@
+.menu ul li{
+    display: inline;
+    line-height: 80px;
+    list-style-type: none;
+    padding: 10px 50px 20px;
+    border-radius: 20px;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: #00ac4f;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.menu ul li:hover{
+    background-color: #F2F3F4;
+}
+.dangnhap ul li{
+    display: inline;
+    line-height: 80px;
+    list-style-type: none;
+    padding: 10px 50px 20px;
+    border-radius: 20px;
+}
+.dangnhap ul li a{
+    text-decoration: none;
+    color: #00ac4f;
+    font-size: 25px;
+    font-weight: bolder;
+}
+.dangnhap ul li:hover{
+    background-color: #F2F3F4;
+}

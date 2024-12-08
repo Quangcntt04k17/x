@@ -1,0 +1,258 @@
+/* XemLichKham.css */
+
+/* Phần chính của trang */
+.danh-sach-lich-hen {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Các nút lọc và ô tìm kiếm trên cùng một dòng */
+.filter-search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 20px 0 20px;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px; /* Khoảng cách giữa các nút */
+}
+
+.filter-buttons button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter-buttons button:hover {
+  background-color: #45a049;
+}
+
+/* Tìm kiếm theo ngày */
+.search-container {
+  display: flex;
+  gap: 10px; /* Khoảng cách giữa các phần tử trong search */
+  align-items: center;
+}
+
+.search-container input {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.search-container button {
+  padding: 10px 20px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+  background-color: #1e88e5;
+}
+
+/* Bảng danh sách lịch hẹn */
+.lich-hen-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.lich-hen-table th, .lich-hen-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.lich-hen-table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.lich-hen-table td {
+  background-color: #fff;
+}
+
+.lich-hen-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.lich-hen-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.lich-hen-table button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-edit {
+  background-color: #ff9800;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #f57c00;
+}
+
+.btn-confirm {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.btn-confirm:hover {
+  background-color: #45a049;
+}
+
+.btn-cancel {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: #e53935;
+}
+
+/* Phân trang */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.page-button:hover {
+  background-color: #1e88e5;
+}
+
+.page-button:disabled {
+  background-color: #bbb;
+  cursor: not-allowed;
+}
+
+/* Modal sửa lịch hẹn */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.edit-appointment-modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.edit-appointment-modal h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.edit-appointment-modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-appointment-modal label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.edit-appointment-modal input,
+.edit-appointment-modal select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.edit-appointment-modal button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.edit-appointment-modal button:hover {
+  background-color: #45a049;
+}
+
+.edit-appointment-modal button[type="button"] {
+  background-color: #f44336;
+}
+
+.edit-appointment-modal button[type="button"]:hover {
+  background-color: #e53935;
+}
+
+/* Thanh ngang màu xanh giữa menu và nội dung */
+.navbar-divider {
+  width: 100%;
+  height: 8px; /* Điều chỉnh chiều cao của thanh ngang */
+  background-color: green; /* Màu xanh */
+  margin-bottom: 5px;
+}
+.search-container button {
+  background-color: #28a745; /* Màu nền xanh lá */
+  color: white; /* Màu chữ trắng */
+  border: none; /* Xóa đường viền */
+  border-radius: 5px; /* Góc bo tròn */
+  padding: 10px 15px; /* Khoảng cách bên trong */
+  font-size: 14px; /* Kích thước chữ */
+  cursor: pointer; /* Con trỏ tay khi di chuột */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Hiệu ứng */
+}
+
+.search-container button:hover {
+  background-color: #218838; /* Màu nền khi hover */
+  transform: scale(1.05); /* Phóng to nhẹ */
+}
+
+.search-container button:active {
+  background-color: #1e7e34; /* Màu nền khi nhấn */
+  transform: scale(0.95); /* Thu nhỏ nhẹ */
+}

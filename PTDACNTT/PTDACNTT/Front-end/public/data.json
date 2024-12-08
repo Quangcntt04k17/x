@@ -1,0 +1,69 @@
+{
+    "benhAnList": [
+        {
+            "name": "Nguyễn Văn A",
+            "dob": "1990-01-01",
+            "gender": "Nam",
+            "ethnic": "Kinh",
+            "phone": "0123456789",
+            "address": "Hà Nội, Việt Nam",
+            "cIN": "123456789",
+            "hIN": "987654321",
+            "symptoms": "Sốt, Ho, Đau họng",
+            "diagnosis": "Cúm mùa",
+            "treatment": "Nghỉ ngơi, Uống thuốc hạ sốt, Uống nhiều nước"
+        },
+        {
+            "name": "Trần Thị B",
+            "dob": "1985-05-15",
+            "gender": "Nữ",
+            "ethnic": "Thái",
+            "phone": "0987654321",
+            "address": "Thái Nguyên, Việt Nam",
+            "cIN": "987654321",
+            "hIN": "123456789",
+            "symptoms": "Đau bụng, Buồn nôn",
+            "diagnosis": "Viêm dạ dày",
+            "treatment": "Uống thuốc dạ dày, Kiêng ăn đồ chua"
+        },
+        {
+            "name": "Lê Văn C",
+            "dob": "2000-10-10",
+            "gender": "Nam",
+            "ethnic": "Mường",
+            "phone": "0912345678",
+            "address": "Hòa Bình, Việt Nam",
+            "cIN": "456789123",
+            "hIN": "321654987",
+            "symptoms": "Ngứa, Mẩn đỏ",
+            "diagnosis": "Dị ứng da",
+            "treatment": "Bôi thuốc dị ứng, Tránh tiếp xúc với chất gây dị ứng"
+        },
+        {
+            "name": "Phạm Thị D",
+            "dob": "1978-12-30",
+            "gender": "Nữ",
+            "ethnic": "Kinh",
+            "phone": "0123456780",
+            "address": "Đà Nẵng, Việt Nam",
+            "cIN": "159753486",
+            "hIN": "654321789",
+            "symptoms": "Khó thở, Ho khan",
+            "diagnosis": "Hen suyễn",
+            "treatment": "Sử dụng thuốc hít, Tránh khói bụi"
+        },
+        {
+            "name": "Ngô Văn E",
+            "dob": "1995-03-25",
+            "gender": "Nam",
+            "ethnic": "Chăm",
+            "phone": "0345678901",
+            "address": "Ninh Thuận, Việt Nam",
+            "cIN": "852963741",
+            "hIN": "753159846",
+            "symptoms": "Chóng mặt, Mệt mỏi",
+            "diagnosis": "Thiếu máu",
+            "treatment": "Bổ sung sắt, Uống vitamin"
+        }
+    ]
+}

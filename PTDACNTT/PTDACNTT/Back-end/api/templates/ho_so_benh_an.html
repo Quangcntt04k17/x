@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Hồ Sơ Bệnh Án</title>
+    <style>
+        .sort-menu {
+            margin-right:25px;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+        table {
+            width: 100%; /* Đặt chiều rộng của bảng là 100% */
+            border-collapse: collapse; /* Gộp các đường viền của ô lại */
+            margin-top: 20px; /* Khoảng cách trên bảng */
+        }
+        th, td {
+            padding: 15px; /* Khoảng cách bên trong ô */
+            text-align: center; /* Căn trái cho văn bản */
+            border: 1px solid #ddd; /* Đường viền cho ô */
+        }
+        th {
+            background-color: #4CAF50; /* Màu nền cho hàng tiêu đề */
+            color: white; /* Màu chữ cho hàng tiêu đề */
+        }
+        .idBA {
+            text-decoration: none;
+        }
+        tbody .idBN {
+            color="black";
+            text-decoration: none;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Màu nền cho hàng chẵn */
+        }
+        tr:hover {
+            background-color: #ddd; /* Màu nền khi di chuột qua hàng */
+        }
+        .no-record {
+            color: #f00; /* Màu đỏ cho thông báo không có hồ sơ */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Danh Sách Hồ Sơ Bệnh Án</h1>
+
+    <div class="sort-menu">
+        <label for="sortOrder">Sắp xếp theo thời gian:</label>
+        <select id="sortOrder" onchange="fetchData()">
+            <option value="desc" {% if order == 'desc' %}selected{% endif %}>Mới nhất</option>
+            <option value="asc" {% if order == 'asc' %}selected{% endif %}>Cũ nhất</option>
+        </select>
+    </div>
+
+    <!-- Form chọn ngày -->
+    <div class="sort-menu">
+        <form method="get" action="{% url 'ho_so_benh_an_theo_ngay' %}" target="_blank">
+            <label for="ngay">Chọn ngày:</label>
+            <input type="date" id="ngay" name="ngay" value="{{ ngay }}">
+            <button type="submit">Xem Hồ Sơ</button>
+        </form>
+    </div>
+
+    
+
+    <div class="sort-menu">
+        <form method="get" action="{% url 'ho_so_benh_an_theo_khoang_ngay' %}" target="_blank" >
+            <label for="ngay_bat_dau">Ngày bắt đầu:</label>
+            <input type="date" id="ngay_bat_dau" name="ngay_bat_dau" value="{{ ngay_bat_dau }}">
+            
+            <label for="ngay_ket_thuc">Ngày kết thúc:</label>
+            <input type="date" id="ngay_ket_thuc" name="ngay_ket_thuc" value="{{ ngay_ket_thuc }}">
+            
+            <button type="submit">Tìm kiếm</button>
+        </form>
+    </div>
+    
+
+    <!-- Bảng danh sách hồ sơ -->
+    <table>
+        <thead>
+            <tr>
+                <th>Mã Bệnh Án</th>
+                <th>Tên Bệnh Nhân</th>
+                <th>Thời Gian Khám</th>
+                <th>Chi Tiết</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ho_so in ho_so_benh_an %}
+                <tr>
+                    <td>{{ ho_so.maBenhAn }}</td>
+                    <td>{{ ho_so.hoTenBenhNhan }}</td>
+                    <td>{{ ho_so.thoiGianKham }}</td>
+                    <td><a href="#">Xem Chi Tiết</a></td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="3" class="no-record">Không có hồ sơ nào.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<script>
+    // Hàm fetchData để lấy dữ liệu từ API
+    function fetchData() {
+        const order = document.getElementById("sortOrder").value;
+        // Cập nhật URL với giá trị order mới
+        window.location.href = `?order=${order}`;
+    }
+</script>
+
+</body>
+</html>

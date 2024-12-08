@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hồ Sơ Bệnh Án</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+        table {
+            width: 100%; /* Đặt chiều rộng của bảng là 100% */
+            border-collapse: collapse; /* Gộp các đường viền của ô lại */
+            margin-top: 20px; /* Khoảng cách trên bảng */
+        }
+        th, td {
+            padding: 15px; /* Khoảng cách bên trong ô */
+            text-align: center; /* Căn trái cho văn bản */
+            border: 1px solid #ddd; /* Đường viền cho ô */
+        }
+        th {
+            background-color: #4CAF50; /* Màu nền cho hàng tiêu đề */
+            color: white; /* Màu chữ cho hàng tiêu đề */
+        }
+        .idBA {
+            text-decoration: none;
+        }
+
+        tbody .idBN {
+            color="black";
+            text-decoration: none;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2; /* Màu nền cho hàng chẵn */
+        }
+        tr:hover {
+            background-color: #ddd; /* Màu nền khi di chuột qua hàng */
+        }
+        .no-record {
+            color: #f00; /* Màu đỏ cho thông báo không có hồ sơ */
+        }
+    </style>
+</head>
+<body>
+    <h1>Danh Sách Hồ Sơ Bệnh Án</h1>
+    <p>Ngày bạn đã chọn: {{ ngay }}</p>
+
+    <form method="get" action="{% url 'ho_so_benh_an_theo_ngay' %}">
+        <label for="ngay">Chọn ngày:</label>
+        <input type="date" id="ngay" name="ngay">
+        <button type="submit">Xem Hồ Sơ</button>
+    </form>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th >Mã Bệnh Án</th>
+                <th>Tên Bệnh Nhân</th>
+                <th>Thời Gian Khám</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ho_so in ho_so_benh_an_date %}
+                <tr>
+                    <td> <a class="idBA"  href="1">{{ ho_so.maBenhAn }}</a></td>
+                    <td> <a class="idBN"  href="1">{{ ho_so.hoTenBenhNhan }}</a> </td>
+                    <td>{{ ho_so.thoiGianKham }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="3" class="no-record">Không có hồ sơ nào.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

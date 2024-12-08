@@ -1,0 +1,296 @@
+/* Container chính */
+.cont {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Nút thêm bác sĩ */
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+
+/* Container tìm kiếm */
+.searchContainer {
+    margin-bottom: 20px;
+}
+
+
+.searchInput {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-left: 2%;
+}
+
+
+/* Container form nhập bác sĩ */
+.formContainer {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 40%;
+}
+
+
+form table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+form td {
+    padding: 10px;
+}
+
+
+form input,
+form select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+form input[type="number"] {
+    width: 60%;
+}
+
+
+/* Nút lưu và hủy */
+.btn_con {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+
+.btn_con button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 25%;
+}
+
+
+.btn_con button:hover {
+    background-color: #45a049;
+}
+
+
+.btn_con button[type="button"] {
+    background-color: #f44336;
+}
+
+
+.btn_con button[type="button"]:hover {
+    background-color: #d32f2f;
+}
+
+
+/* Danh sách bác sĩ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+td button {
+    padding: 6px 12px;
+    margin: 0 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.editBtn {
+    background-color: #ffa500;
+    color: white;
+}
+
+
+.deleteBtn {
+    background-color: #f44336;
+    color: white;
+}
+
+
+.editBtn:hover {
+    background-color: #ff8c00;
+}
+
+
+.deleteBtn:hover {
+    background-color: #d32f2f;
+}
+
+
+/* Popup xác nhận */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+
+.popup h2 {
+    text-align: center;
+}
+
+
+.popup p {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+
+.popup .btn_con {
+    justify-content: space-between;
+}
+
+
+.popup .btn_con button {
+    width: 48%;
+}
+
+
+.popup .btn_con button:hover {
+    background-color: #45a049;
+}
+
+
+/* Hiệu ứng khi đang xử lý */
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 768px) {
+    .formContainer {
+        padding: 15px;
+    }
+
+
+    form table {
+        width: 100%;
+    }
+
+
+    .searchInput {
+        width: 100%;
+    }
+
+
+    .btn_con button {
+        width: 48%;
+        font-size: 14px;
+    }
+}
+.pagination {
+    display: flex;
+    justify-content: center; /* Căn giữa ngang */
+    align-items: center;    /* Căn giữa dọc nếu cần */
+    margin-top: 20px;       /* Khoảng cách phía trên */
+    gap: 10px;              /* Khoảng cách giữa các nút */
+}
+
+.pagination button {
+    padding: 8px 12px;         /* Kích thước nút */
+    border: 1px solid #ddd;    /* Viền nút */
+    border-radius: 4px;        /* Bo góc */
+    background-color: #f9f9f9; /* Màu nền */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+    background-color: #e0e0e0; /* Màu nền khi hover */
+}
+
+.pagination button:disabled {
+    background-color: #f0f0f0; /* Màu nền khi bị vô hiệu hóa */
+    cursor: not-allowed;
+}
+.searchContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.searchInput {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.searchBtn {
+    background-color: #28a745; /* Màu nền xanh lá */
+  color: white; /* Màu chữ trắng */
+  border: none; /* Xóa đường viền */
+  border-radius: 5px; /* Góc bo tròn */
+  padding: 10px 15px; /* Khoảng cách bên trong */
+  font-size: 14px; /* Kích thước chữ */
+  cursor: pointer; /* Con trỏ tay khi di chuột */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Hiệu ứng */
+}
+
+.searchBtn:hover {
+    background-color: #218838; /* Màu nền khi hover */
+  transform: scale(1.05); /* Phóng to nhẹ */
+}
+.searchBtn:active{
+    background-color: #1e7e34; /* Màu nền khi nhấn */
+  transform: scale(0.95); /* Thu nhỏ nhẹ */
+}
+
+
+
